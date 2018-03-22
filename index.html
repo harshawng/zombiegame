@@ -85,17 +85,6 @@
         });
         infowindow.open(zombie_map, marker);
                 
-                var start = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var safe = new google.maps.LatLng(43.66808446185892 , -79.82732889247376);
-                
-                var path = new google.maps.Polyline({
-        path: [start, safe],
-        strokeColor: "#0000FF",
-        strokeOpacity: 0.8,
-        strokeWeight: 2
-        });
-        path.setMap(zombie_map);
-                
                 old_position = marker;
                 
                    for ( var i=0; i< all_markers; i++){
@@ -128,6 +117,16 @@
                 
              
         }
+              var start = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var safe = new google.maps.LatLng(43.66808446185892 , -79.82732889247376);
+                
+                var path = new google.maps.Polyline({
+        path: [start, safe],
+        strokeColor: "#0000FF",
+        strokeOpacity: 0.8,
+        strokeWeight: 2
+        });
+        path.setMap(zombie_map);
             }
                   
                      
